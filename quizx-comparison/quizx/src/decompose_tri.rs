@@ -109,6 +109,8 @@ impl<G: GraphLike> Decomposition<G> for TriDecomp {
             g2.add_vertex_with_edge(VType::X, v);
             g2.scalar_mut().mul_sqrt2_pow(-2);
 
+            println!("1 triangle -> 2 terms used");
+
             return vec![g1, g2];
         }
         // 2 triangles into 3 terms
@@ -138,6 +140,8 @@ impl<G: GraphLike> Decomposition<G> for TriDecomp {
             g3.add_vertex_with_edge_phase(VType::X, Rational::one(), u2);
             g3.add_vertex_with_edge_phase(VType::X, Rational::one(), v2);
             g3.scalar_mut().mul_sqrt2_pow(-4);
+
+            println!("2 triangle -> 3 terms used");
 
             return vec![g1, g2, g3];
         }
@@ -194,6 +198,9 @@ impl<G: GraphLike> Decomposition<G> for TriDecomp {
             g5.add_vertex_with_edge_phase(VType::X, Rational::one(), u3);
             g5.add_vertex_with_edge_phase(VType::X, Rational::one(), v3);
             g5.scalar_mut().mul_sqrt2_pow(-6);
+
+            
+            println!("3 triangle -> 5 terms used");
 
             return vec![g1, g2, g3, g4, g5];
         }
