@@ -1,4 +1,4 @@
-# Steps to run execute Feynman loop diagram quantum circuits using quizx
+# Steps to run the two Feynman loop diagram quantum circuits using quizx
 
 NOTE: This was only tested on Ubuntu, as the required packages are much more difficult to work with on Windows.
 
